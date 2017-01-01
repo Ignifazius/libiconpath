@@ -16756,7 +16756,7 @@ end
 
 function LibIconPath_getIDByName(name) --srsly blizzard... why do you make me do this?! -.-
 	for k,v in pairs(IconDB) do
-		if v == name then 
+		if v == string.lower(name) then 
 			return k
 		end
 	end
