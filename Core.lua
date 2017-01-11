@@ -16754,6 +16754,11 @@ function LibIconPath_getPath(id)
 	return "Interface\\Icons\\"..LibIconPath_getName(id);
 end
 
+function LibIconPath_getIconBySpellID(id)
+	_, _, icon = GetSpellInfo(id)
+	return LibIconPath_getPath(icon)
+end
+
 function LibIconPath_getIDByName(name) --srsly blizzard... why do you make me do this?! -.-
 	for k,v in pairs(IconDB) do
 		if v == string.lower(name) then 
