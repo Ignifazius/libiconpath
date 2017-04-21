@@ -16723,7 +16723,7 @@ local IconDB = {
 	[1409001] = "achievements_zone_stormheim",
 	[1409000] = "achievements_zone_highmountain",
 	[1409002] = "achievements_zone_suramar",
-	[973893] = "Inv_glove_mail_draenorcrafted_d_01_alliance]"
+	[973893] = "Inv_glove_mail_draenorcrafted_d_01_alliance]",
 	 -- 7.1 + 7.2
 	[1589500] = "70_inscription_vantus_rune_azure",
 	[1589501] = "70_inscription_vantus_rune_light",
