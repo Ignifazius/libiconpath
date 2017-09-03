@@ -11,6 +11,10 @@
 -- You should have received a copy of the GNU General Public License
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+local MAJOR, MINOR = "LibIconPath", 20
+if not LibStub then error(MAJOR .. " requires LibStub to operate") end
+local lib = LibStub:NewLibrary(MAJOR, MINOR)
+if not lib then return end
 
 local IconDB = {
 	 [132089] = "ability_ambush",
@@ -18208,7 +18212,7 @@ local IconDB = {
 	 [1719208] = "spell_argus_withering_fire",
 }
 
-function LibIconPath_getName(id)
+function lib:getName(id)
 	local name;
 	if (type(id) == "number") then
 		name = IconDB[id]
@@ -18231,22 +18235,26 @@ function LibIconPath_getName(id)
 	
 end
 
-function LibIconPath_getPath(id)
+function lib:getPath(id)
 	return "Interface\\Icons\\"..LibIconPath_getName(id);
 end
 
-function LibIconPath_getIconBySpellID(id)
+function lib:getIconBySpellID(id)
 	_, _, icon = GetSpellInfo(id)
 	return LibIconPath_getPath(icon)
 end
 
-function LibIconPath_getIDByName(name) --srsly blizzard... why do you make me do this?! -.-
+function lib:getIDByName(name)
 	for k,v in pairs(IconDB) do
 		if v == string.lower(name) then 
 			return k
 		end
 	end
 	return nil
+end
+
+function lib:GetRevision()
+	return MINOR
 end
 
 
