@@ -18241,7 +18241,7 @@ end
 
 function lib:getIconBySpellID(id)
 	_, _, icon = GetSpellInfo(id)
-	return LibIconPath_getPath(icon)
+	return getPath(icon)
 end
 
 function lib:getIDByName(name)
