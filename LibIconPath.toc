@@ -4,5 +4,5 @@
 ## Version: 2.0
 ## Author: Ignifazius
 
-LibIconPath.lua
 LibStub/Libstub.lua
+LibIconPath.xml

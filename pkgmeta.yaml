@@ -1,0 +1,6 @@
+externals:
+  LibStub:
+      url: svn://repos.wowace.com/wow/libstub/trunk
+      tag: latest
+
+enable-nolib-creation: yes
