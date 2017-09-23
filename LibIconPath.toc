@@ -6,3 +6,4 @@
 
 LibStub/Libstub.lua
 LibIconPath.xml
+Test.lua

@@ -4,3 +4,6 @@ externals:
       tag: latest
 
 enable-nolib-creation: yes
+
+ignore:
+ - Test.lua
